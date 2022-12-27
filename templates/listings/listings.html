@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% load static %} {% block content %} | Browse
-Property Listings
+{% extends 'base.html' %} {% load humanize %} {% block title %} | Browse
+Property Listings {% endblock %} {% block content %}
 <section id="showcase-inner" class="py-5 text-white">
   <div class="container">
     <div class="row text-center">
@@ -39,7 +39,7 @@ Property Listings
           <div class="card-img-overlay">
             <h2>
               <span class="badge badge-secondary text-white"
-                >${{ listing.price }}</span
+                >${{ listing.price | intcomma }}</span
               >
             </h2>
           </div>
@@ -47,8 +47,8 @@ Property Listings
             <div class="listing-heading text-center">
               <h4 class="text-primary">{{ listing.title }}</h4>
               <p>
-                <i class="fas fa-map-marker text-secondary"></i> {{ listing.city
-                }} {{ listing.state }}, {{ listing.zipcode }}
+                <i class="fas fa-map-marker text-secondary"></i>
+                {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}
               </p>
             </div>
             <hr />

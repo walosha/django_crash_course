@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "pages.apps.PagesConfig",
     "realtors.apps.RealtorsConfig",
-    "listings.apps.ListingsConfig"
+    "listings.apps.ListingsConfig",
+    "django.contrib.humanize"
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,7 @@ STATICFILES_DIRS=[os.path.join(BASE_DIR,'core/static')]
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+MEDIAL_ROOT='/media'
+MEDIAL_URL='/media'
