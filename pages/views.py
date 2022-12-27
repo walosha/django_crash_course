@@ -6,8 +6,8 @@ from .choices import  bedroom_choices,state_choices,price_choices
 def index(request):
     context =  { 
         "state_choices":state_choices,
-    "bedroom_choices":bedroom_choices,
-    "price_choices":price_choices
+        "bedroom_choices":bedroom_choices,
+        "price_choices":price_choices
     }
     return render(request, 'pages/index.html',context)
 
