@@ -6,8 +6,8 @@ listing.title }} {% endblock %} {% block content %}
       <div class="col-md-12">
         <h1 class="display-4">{{ listing.title }}</h1>
         <p class="lead">
-          <i class="fas fa-map-marker"></i>
-          {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}
+          <i class="fas fa-map-marker"></i> {{ listing.city }} {{ listing.state
+          }}, {{ listing.zipcode }}
         </p>
       </div>
     </div>
@@ -172,7 +172,7 @@ listing.title }} {% endblock %} {% block content %}
         </button>
       </div>
       <div class="modal-body">
-        <form action="" method="POST">
+        <form action="{% url 'contact' %}" method="POST">
           {% csrf_token %} {% if user.is_authenticated %}
           <input type="hidden" name="user_id" value="{{ user.id }}" />
           {% else %}

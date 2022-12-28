@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "pages.apps.PagesConfig",
     "realtors.apps.RealtorsConfig",
     "listings.apps.ListingsConfig",
+    "contacts.apps.ContactsConfig",
     "accounts.apps.AccountsConfig",
     "django.contrib.humanize",
     # "django.contrib.messages"
