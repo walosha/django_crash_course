@@ -55,7 +55,7 @@
               <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
                 <i class="fas fa-sign-out-alt"></i> Logout
               </a>
-              <form action="{% url 'index' %}" method="POST" id="logout">
+              <form action="{% url 'logout' %}" method="POST" id="logout">
                 {% csrf_token %}
                 <input type="hidden">
               </form>
@@ -68,7 +68,7 @@
               class="nav-item mr-3"
             {% endif %}
             >
-              <a class="nav-link" href="">
+              <a href="{% url 'register' %}" class="nav-link" href="">
                 <i class="fas fa-user-plus"></i> Register</a>
             </li>
             <li
@@ -78,7 +78,8 @@
               class="nav-item mr-3"
             {% endif %}
             >
-              <a class="nav-link" >
+              <a  href="{% url 'login' %}"
+              class="nav-link" >
                 <i class="fas fa-sign-in-alt"></i>
 
                 Login</a>

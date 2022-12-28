@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     "pages.apps.PagesConfig",
     "realtors.apps.RealtorsConfig",
     "listings.apps.ListingsConfig",
-    "django.contrib.humanize"
+    "accounts.apps.AccountsConfig",
+    "django.contrib.humanize",
+    # "django.contrib.messages"
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIAL_ROOT='/media'
 MEDIAL_URL='/media'
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
